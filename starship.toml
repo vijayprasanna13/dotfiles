@@ -33,7 +33,7 @@ up_to_date = '✓'
 stashed = '📦'
 modified = '($count) modified'
 staged = '($count) staged'
-format = '[\[$all_status\]](fg:pastel_green)'
+format = '[\[($all_status)\]](fg:pastel_green)'
 
 [cmd_duration]
 format="[$duration]($style)"
