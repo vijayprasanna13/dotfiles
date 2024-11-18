@@ -1,0 +1,86 @@
+"$schema"="https://starship.rs/config-schema.json"
+
+palette = "mothership"
+
+format = '''
+$username$hostname$directory$git_branch$git_status$fill$bun
+$character'''
+
+#right_format="""
+#$cmd_duration"""
+
+add_newline = true
+command_timeout=1000
+
+[fill]
+symbol = '.'
+
+[character]
+success_symbol = "[\uf432](bold fg:yellow)"
+error_symbol = "[✖](bold fg:red)"
+
+[directory]
+truncate_to_repo = false
+style="yellow"
+
+[git_branch]
+symbol = ""
+format='[\[$symbol $branch(:$remote_branch)\]](fg:pastel_green)'
+
+[git_status]
+conflicted = '🏳'
+ahead = '⇡${ahead_count}'
+behind = '⇣${behind_count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+up_to_date = '✓'
+stashed = '📦'
+modified = '($count) modified'
+staged = '($count) staged'
+format = '[\[$all_status\]](fg:pastel_green)'
+
+[cmd_duration]
+format="[$duration]($style)"
+
+[username]
+disabled = false
+show_always = true
+format = "[$user](fg:gray)"
+
+[hostname]
+ssh_only = false
+format = '[@](#7e8579)[$hostname](gray) '
+disabled = false
+
+[bun]
+format = '[\[bun $version\]](italic yellow) '
+
+[palettes.mothership]
+rosewater = "#f38ba8"
+flamingo  = "#f2cdcd"
+pink      = "#f5c2e7"
+mauve     = "#cba6f7"
+red       = "#f38ba8"
+maroon    = "#eba0ac"
+peach     = "#fab387"
+yellow    = "#f7de60"
+dark_yellow = "#edc80e"
+green     = "#a6e3a1"
+pastel_green = "#7ea364"
+teal      = "#94e2d5"
+sky       = "#89dceb"
+sapphire  = "#74c7ec"
+blue      = "#89b4fa"
+lavender  = "#b4befe"
+text      = "#cdd6f4"
+subtext1  = "#bac2de"
+subtext0  = "#a6adc8"
+overlay2  = "#9399b2"
+overlay1  = "#7f849c"
+overlay0  = "#6c7086"
+surface2  = "#585b70"
+surface1  = "#45475a"
+surface0  = "#313244"
+base      = "#1e1e2e"
+mantle    = "#181825"
+crust     = "#11111b"
+gray      = "#7e8579"
