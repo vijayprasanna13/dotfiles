@@ -25,15 +25,15 @@ symbol = ""
 format='[\[$symbol $branch(:$remote_branch)\]](fg:pastel_green)'
 
 [git_status]
-conflicted = '🏳'
-ahead = '⇡${ahead_count}'
-behind = '⇣${behind_count}'
-diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+conflicted = '\[conflicts\]'
+ahead = '\[⇡${ahead_count}\]'
+behind = '\[⇣${behind_count}\]'
+diverged = '\[⇕⇡${ahead_count}⇣${behind_count}\]'
 up_to_date = '✓'
-stashed = '📦'
-modified = '($count) modified'
-staged = '($count) staged'
-format = '[\[($all_status)\]](fg:pastel_green)'
+stashed = '\[stashed\]'
+modified = '\[($count) modified\]'
+staged = '\[($count) staged\]'
+format = '[$all_status](fg:pastel_green)'
 
 [cmd_duration]
 format="[$duration]($style)"
